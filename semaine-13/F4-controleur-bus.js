@@ -23,16 +23,20 @@ Peut-on enchaîner plusieurs ternaires ? Pourquoi est-ce souvent déconseillé ?
 
 const age = 16;
 const statut = age >= 18 ? 'majeur' : 'mineur';
-let tarif;
+const calculerTarif = (agePassager) => {
+	if (agePassager < 5) {
+		return 0;
+	} else if (agePassager <= 18) {
+		return 500;
+	} else {
+		return 1000;
+	}
+};
 
-if (age < 5) {
-	tarif = 0;
-} else if (age <= 18) {
-	tarif = 500;
-} else {
-	tarif = 1000;
-}
+const tarif = calculerTarif(age);
 
 console.log(`Statut : ${statut} — Tarif : ${tarif} FC`);
+
+require('node:assert/strict').equal(calculerTarif(18), 1000);
 
 

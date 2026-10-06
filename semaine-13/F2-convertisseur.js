@@ -25,13 +25,15 @@ const saisie = '2500';
 console.log(saisie + 500);
 // La saisie est une chaîne : + concatène le texte et le nombre au lieu de les additionner.
 
-const montant = Number(saisie);
-console.log(montant + 500);
+const montant = Number(saisie + 500);
+console.log(montant);
 
 // Prédictions : Number('') = 0, Number('abc') = NaN, Number(' 42 ') = 42, Number(true) = 1.
 console.log(Number(''));
 console.log(Number('abc'));
 console.log(Number(' 42 '));
 console.log(Number(true));
+
+require('node:assert/strict').equal(montant, 3000);
 
 

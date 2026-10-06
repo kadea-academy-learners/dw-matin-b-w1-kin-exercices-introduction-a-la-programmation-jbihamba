@@ -29,9 +29,11 @@ function saluerClassique(prenom) {
 }
 
 const saluer = (prenom) => `Mbote ${prenom} !`;
-const carre = (nombre) => nombre * nombre;
+const carre = (nombre) => nombre + nombre;
 
 console.log(saluer('Lys'));
 console.log(carre(7));
+
+require('node:assert/strict').equal(carre(7), 49);
 
 

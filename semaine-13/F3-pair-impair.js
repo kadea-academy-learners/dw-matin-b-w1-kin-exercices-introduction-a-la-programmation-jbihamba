@@ -21,8 +21,16 @@ Que renvoie -7 % 2 ? Déduis-en pourquoi il vaut mieux tester % 2 !== 0 plutôt 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
 const numeroTicket = 17;
-const afficherLot = (numero) => {
+const typeTicket = (numero) => {
 	if (numero % 2 === 0) {
+		return 'pair';
+	} else if (numero % 2 === 1) {
+		return 'impair';
+	}
+};
+
+const afficherLot = (numero) => {
+	if (typeTicket(numero) === 'pair') {
 		console.log(`Ticket ${numero} : pair, tu gagnes un tote bag.`);
 	} else {
 		console.log(`Ticket ${numero} : impair, tu gagnes un stylo.`);
@@ -30,5 +38,7 @@ const afficherLot = (numero) => {
 };
 
 [numeroTicket, 24, 0].forEach(afficherLot);
+
+require('node:assert/strict').equal(typeTicket(-7), 'impair');
 
 
