@@ -35,12 +35,11 @@ Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fo
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
-// Mes prédictions (avant d'exécuter) :
-//
-
+// Prédictions : ville est accessible dans le bloc, commune et secret ne le sont pas à l'extérieur.
 const ville = 'Kinshasa';
+let commune;
 if (true) {
-  const commune = 'Gombe';
+  commune = 'Gombe';
   console.log(ville);
 }
 console.log(commune);

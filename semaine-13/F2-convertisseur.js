@@ -21,4 +21,17 @@ Qu'est-ce que NaN, et pourquoi NaN === NaN renvoie false ? Quelle fonction utili
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const saisie = '2500';
+console.log(saisie + 500);
+// La saisie est une chaîne : + concatène le texte et le nombre au lieu de les additionner.
+
+const montant = Number(saisie);
+console.log(montant + 500);
+
+// Prédictions : Number('') = 0, Number('abc') = NaN, Number(' 42 ') = 42, Number(true) = 1.
+console.log(Number(''));
+console.log(Number('abc'));
+console.log(Number(' 42 '));
+console.log(Number(true));
+
 

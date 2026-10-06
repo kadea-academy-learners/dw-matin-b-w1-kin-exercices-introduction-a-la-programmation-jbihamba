@@ -20,4 +20,21 @@ Pourquoi FizzBuzz est-il célèbre dans les entretiens d'embauche de développeu
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const fizzBuzz = (nombre) => {
+	if (nombre % 3 === 0) {
+		return 'Malewa';
+	} else if (nombre % 5 === 0) {
+		return 'Wewa';
+	} else if (nombre % 3 === 0 && nombre % 5 === 0) {
+		return 'MalewaWewa';
+	}
+	return nombre;
+};
+
+for (let nombre = 1; nombre <= 30; nombre++) {
+	console.log(fizzBuzz(nombre));
+}
+
+require('node:assert/strict').equal(fizzBuzz(15), 'MalewaWewa');
+
 

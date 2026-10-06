@@ -23,4 +23,20 @@ Que fait l'opérateur ?? (coalescence des nuls) et en quoi est-il différent de 
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const afficherScoreBug = (score) => `Score : ${score || 'aucun'}`;
+console.log(afficherScoreBug(15));
+console.log(afficherScoreBug(0));
+console.log(afficherScoreBug(undefined));
+
+// || considère 0 comme une valeur falsy et lui substitue donc « aucun ».
+const afficherScore = (score) => `Score : ${score || 'aucun'}`;
+console.log(afficherScore(15));
+console.log(afficherScore(0));
+console.log(afficherScore(undefined));
+
+const estConnecte = true;
+estConnecte && console.log('Bienvenue !');
+
+require('node:assert/strict').equal(afficherScore(0), 'Score : 0');
+
 
